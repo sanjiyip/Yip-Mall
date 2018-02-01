@@ -1,0 +1,10 @@
+body {
+  background: url(/Users/sanjiyip/GitHub/Demos/Yip-Mall/dist/resource/dog.png); }
+
+p {
+  padding: 10rem; }
+
+div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex; }
