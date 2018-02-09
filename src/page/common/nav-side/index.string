@@ -1,0 +1,22 @@
+{{#navList}}
+
+  <!-- 注释：如果 isActive 为 true，class="nav-item active" -->
+
+  {{#isActive}}
+  <li class="nav-item ">
+    <a href="{{href}}" class="link active">{{desc}}</a>
+  </li>
+  {{/isActive}}
+
+  <!-- 注释：如果 isActive 为 false ，class="nav-item" -->
+
+  {{^isActive}}
+  <li class="nav-item ">
+      <a href="{{href}}" class="link">{{desc}}</a>
+  </li>
+  {{/isActive}}
+
+
+  
+{{/navList}}
+

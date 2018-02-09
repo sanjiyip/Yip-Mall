@@ -11,7 +11,9 @@
     "type": "git",
     "url": "git+https://github.com/sanjiyip/Yip-Mall.git"
   },
-  "keywords": ["mall"],
+  "keywords": [
+    "mall"
+  ],
   "author": "Yip",
   "license": "ISC",
   "bugs": {
@@ -20,7 +22,10 @@
   "homepage": "https://github.com/sanjiyip/Yip-Mall#readme",
   "devDependencies": {
     "autoprefixer": "^7.2.5",
+    "babel-core": "^6.26.0",
     "babel-eslint": "^8.2.1",
+    "babel-loader": "^7.1.2",
+    "babel-preset-env": "^1.6.1",
     "clean-webpack-plugin": "^0.1.18",
     "css-loader": "^0.28.9",
     "eslint": "^4.16.0",
@@ -37,6 +42,8 @@
     "webpack-dev-server": "^2.11.1"
   },
   "dependencies": {
+    "font-awesome": "^4.7.0",
+    "hogan.js": "^3.0.2",
     "jquery": "^3.3.1"
   }
 }

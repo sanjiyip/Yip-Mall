@@ -1,0 +1,28 @@
+/*
+ * @Author: yip 
+ * @Date: 2018-02-09 12:02:50 
+ * @Last Modified by: yip
+ * @Last Modified time: 2018-02-09 14:33:50
+ */
+.nav-side {
+  float: left;
+  width: 130px;
+  min-height: 100px;
+  .nav-item {
+    font-size: 13px;
+    line-height: 25px;
+
+    .link {
+      color: #888;
+    }
+    .link.active {
+      color: #c60023;
+    }
+  }
+}
+.content {
+  &.with-nav {
+    float: left;
+    width: 950px;
+  }
+}

@@ -1,0 +1,27 @@
+/*
+ * @Author: yip 
+ * @Date: 2018-02-07 16:11:48 
+ * @Last Modified by: yip
+ * @Last Modified time: 2018-02-08 16:33:23
+ */
+.nav {
+  background: #eee;
+  height: 30px;
+  line-height: 30px;
+  .user {
+    float: left;
+    &.login {
+      display: none;
+    }
+    .link {
+      margin-right: 5px;
+    }
+  }
+  .nav-list {
+    float: right;
+    .nav-item {
+      display: inline-block;
+      margin-left: 5px;
+    }
+  }
+}

@@ -8,10 +8,11 @@ const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const WEBPACK_ENV = process.env.WEBPACK_ENV || 'dev';
 
 // 获取 html-webpack-plugin 参数的方法（返回一个对象作为插件的参数，参数 name 就是页面的名称）
-let getHTMLConfig = name => {
+let getHTMLConfig = (name, title) => {
   return {
     template: path.join(__dirname, `./src/view/${name}.html`), //定义插件读取的模板文件是根目录下的[name].html
     filename: `view/${name}.html`, //定义通过模板文件新生成的页面名称
+    title: title,
     inject: true,
     hash: true,
     chunks: ['common', name] // chunks 成员必须是 entry 中的属性名
@@ -23,7 +24,8 @@ const config = {
   entry: {
     common: [path.join(__dirname, './src/page/common/index.js')],
     index: [path.join(__dirname, './src/page/index/index.js')],
-    login: [path.join(__dirname, './src/page/login/index.js')]
+    login: [path.join(__dirname, './src/page/login/index.js')],
+    result: [path.join(__dirname, './src/page/result/index.js')]
   },
   output: {
     path: path.join(__dirname, './dist'),
@@ -39,12 +41,30 @@ const config = {
   externals: {
     jquery: 'window.$'
   },
+  // 路径别名：
+  resolve: {
+    alias: {
+      // 此法可以直接用属性名来代替路径的部分字段
+      util: path.resolve(__dirname, './src/util'),
+      page: path.resolve(__dirname, './src/page'),
+      image: path.resolve(__dirname, './src/image'),
+      view: path.resolve(__dirname, './src/view'),
+      service: path.resolve(__dirname, './src/service'),
+      node_modules: path.resolve(__dirname, './node_modules')
+    }
+  },
+  // loader
   module: {
     rules: [
+      // babel-loader
+      {
+        test: /\.js$/,
+        exclude: /node_modules/,
+        use: [{ loader: 'babel-loader' }]
+      },
       // sass-loader
       {
         test: /\.scss$/,
-        exclude: /node_modules/,
         use: ExtractTextPlugin.extract({
           fallback: 'style-loader',
           use: [
@@ -69,17 +89,17 @@ const config = {
       },
       // html-loader
       {
-        test: /\.(html)$/,
-        use: {
-          loader: 'html-loader'
-        }
+        test: /\.string$/,
+        use: ['html-loader']
       }
     ]
   },
   plugins: [
     // HTML 模板页面模板(多页面就需要多个 HTML 模板)
-    new HtmlWebpackPlugin(getHTMLConfig('index')),
-    new HtmlWebpackPlugin(getHTMLConfig('login')),
+    new HtmlWebpackPlugin(getHTMLConfig('index', '首页')),
+    new HtmlWebpackPlugin(getHTMLConfig('login', '登录页')),
+    new HtmlWebpackPlugin(getHTMLConfig('result', '操作结果页')),
+
     // 提取公共模块的插件 —— 会将重复使用的代码提取出来
     new webpack.optimize.CommonsChunkPlugin({
       // name 与 entry 中的属性同名时，将 entry 对应的模块放入下面的代码中

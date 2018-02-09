@@ -7,7 +7,7 @@ npm install --save-dev webpack
 npm install --save-dev webpack-dev-server
 ```
 
-## ESLint 插件
+### ESLint 插件
 
 ```bash
 npm install --save-dev eslint  babel-eslint
@@ -50,3 +50,15 @@ npm install --save-dev url-loader file-loader
 ```
 
 ## 上线（生产）用的依赖包 --save
+
+### Hogan 模板渲染
+
+```bash
+npm install hogan.js --save
+```
+
+### font-awesome
+
+```bash
+npm install font-awesome --save
+```
