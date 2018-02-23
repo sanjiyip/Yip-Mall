@@ -2,7 +2,7 @@
  * @Author: yip 
  * @Date: 2018-02-06 16:18:32 
  * @Last Modified by: yip
- * @Last Modified time: 2018-02-08 15:44:54
+ * @Last Modified time: 2018-02-22 17:10:26
  */
 //  css-rest
 /* css reset */
@@ -13,6 +13,7 @@
 }
 
 body {
+  min-width: 1080px;
   background: #f6f6f6;
   font: 12px/1.5 tahoma, arial, Microsoft YaHei, sans-serif;
 }
@@ -41,6 +42,24 @@ input[type="checkbox"] {
   margin: 0 auto;
   position: relative;
   overflow: hidden;
+}
+
+/* panel 样式 */
+.panel {
+  padding: 10px;
+  margin-bottom: 10px;
+  background-color: #fff;
+  .panel-title {
+    padding: 10px;
+    font-size: 14px;
+    color: #666;
+    font-weight: bold;
+    border-bottom: 1px solid #eee;
+  }
+  .panel-body {
+    padding: 10px;
+    overflow: hidden;
+  }
 }
 
 /* 全局通用样式 */

@@ -2,7 +2,7 @@
  * @Author: yip 
  * @Date: 2018-02-08 12:58:18 
  * @Last Modified by: yip
- * @Last Modified time: 2018-02-08 15:57:50
+ * @Last Modified time: 2018-02-22 17:02:51
  */
 
 .logo {
@@ -29,4 +29,14 @@
     height: 44px;
     width: 80px;
   }
+}
+
+.crumb {
+  height: 40px;
+  line-height: 40px;
+  font-size: 14px;
+  color: #888;
+  background: #eee;
+  border-top: 2px solid #c60023;
+  margin-bottom: 15px;
 }

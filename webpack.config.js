@@ -1,3 +1,9 @@
+/*
+ * @Author: yip 
+ * @Date: 2018-02-10 14:50:26 
+ * @Last Modified by: yip
+ * @Last Modified time: 2018-02-22 20:37:01
+ */
 const path = require('path');
 const webpack = require('webpack');
 const CleanWebpackPlugin = require('clean-webpack-plugin'); // 生产环境用
@@ -24,13 +30,26 @@ const config = {
   entry: {
     common: [path.join(__dirname, './src/page/common/index.js')],
     index: [path.join(__dirname, './src/page/index/index.js')],
-    login: [path.join(__dirname, './src/page/login/index.js')],
+    'user-login': [path.join(__dirname, './src/page/user-login/index.js')],
+    'user-register': [
+      path.join(__dirname, './src/page/user-register/index.js')
+    ],
+    'user-pass-reset': [
+      path.join(__dirname, './src/page/user-pass-reset/index.js')
+    ],
+    'user-pass-update': [
+      path.join(__dirname, './src/page/user-pass-update/index.js')
+    ],
+    'user-center': [path.join(__dirname, './src/page/user-center/index.js')],
+    'user-center-update': [
+      path.join(__dirname, './src/page/user-center-update/index.js')
+    ],
     result: [path.join(__dirname, './src/page/result/index.js')]
   },
   output: {
     path: path.join(__dirname, './dist'),
     // publicPath: path.join(__dirname, './dist'), //生产环境用
-    publicPath: '/dist', //开发环境用
+    publicPath: '/dist/', //开发环境用
     filename: 'js/[name].bundle-[hash].js' // 在文件名前加上路径，就可以生成文件夹
   },
   // webpack-dev-server
@@ -97,7 +116,12 @@ const config = {
   plugins: [
     // HTML 模板页面模板(多页面就需要多个 HTML 模板)
     new HtmlWebpackPlugin(getHTMLConfig('index', '首页')),
-    new HtmlWebpackPlugin(getHTMLConfig('login', '登录页')),
+    new HtmlWebpackPlugin(getHTMLConfig('user-login', '登录页')),
+    new HtmlWebpackPlugin(getHTMLConfig('user-register', '注册页')),
+    new HtmlWebpackPlugin(getHTMLConfig('user-pass-reset', '找回密码')),
+    new HtmlWebpackPlugin(getHTMLConfig('user-center', '用户中心')),
+    new HtmlWebpackPlugin(getHTMLConfig('user-center-update', '修改用户信息')),
+    new HtmlWebpackPlugin(getHTMLConfig('user-pass-update', '修改密码')),
     new HtmlWebpackPlugin(getHTMLConfig('result', '操作结果页')),
 
     // 提取公共模块的插件 —— 会将重复使用的代码提取出来

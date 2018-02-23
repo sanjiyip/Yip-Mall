@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <!-- ejs模板语法 -->
+  <meta charset=UTF-8> <meta http-equiv=X-UA-Compatible content="ie=edge"> <meta name=keywords content="Yip, 电商"> <meta name=description content=" YipMall电商平台开发"> <link href=https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css rel=stylesheet> 
+    <title>
+      注册页 - YipMall </title>
+<link href="/Users/sanjiyip/GitHub/Demos/Yip-Mall/dist/css/common.bundle-3fc3e809aecdb0a0b55b.css?3fc3e809aecdb0a0b55b" rel="stylesheet"><link href="/Users/sanjiyip/GitHub/Demos/Yip-Mall/dist/css/user-register.bundle-3fc3e809aecdb0a0b55b.css?3fc3e809aecdb0a0b55b" rel="stylesheet"></head>
+
+<body>
+  <div class=nav-simple> <div class=w> <a class=logo href=./index.html>YipMall</a> </div> </div> 
+    <!-- 登录主体内容 -->
+    <div class="page-wrap">
+      <div class="w">
+        <div class="user-con">
+          <div class="user-title">用户注册</div>
+          <!-- 盒子 -->
+          <div class="user-box">
+            <!-- 错误信息提示 -->
+            <div class="error-item">
+              <i class="fa fa-minus-circle error-icon"></i>
+              <p class="error-msg">Error</p>
+            </div>
+            <!-- 用户名 -->
+            <div class="user-item">
+              <label for="user-name" class="user-label">
+                <i class="fa fa-user"></i>
+              </label>
+              <input type="text" id="user-name" class="user-content" placeholder="请输入用户名" autocomplete="off">
+            </div>
+            <!-- 用户密码 -->
+            <div class="user-item">
+              <label for="password" class="user-label">
+                <i class="fa fa-lock"></i>
+              </label>
+              <input type="password" id="password" class="user-content" placeholder="请输入密码" autocomplete="off">
+            </div>
+            <!-- 密码确认 -->
+            <div class="user-item">
+              <label for="password-confirm" class="user-label">
+                <i class="fa fa-lock"></i>
+              </label>
+              <input type="password" id="password-confirm" class="user-content" placeholder="请再次输入密码" autocomplete="off">
+            </div>
+            <!--  手机号 -->
+            <div class="user-item">
+              <label for="phone" class="user-label">
+                <i class="fa fa-phone"></i>
+              </label>
+              <input type="text" id="phone" class="user-content" placeholder="请输入手机号码" autocomplete="off">
+            </div>
+            <!--  邮箱号 -->
+            <div class="user-item">
+              <label for="email" class="user-label">
+                <i class="fa fa-envelope "></i>
+              </label>
+              <input type="text" id="email" class="user-content" placeholder="请输入邮箱地址" autocomplete="off">
+            </div>
+            <!--  密码提示问题 -->
+            <div class="user-item">
+              <label for="question" class="user-label">
+                <i class="fa fa-question"></i>
+              </label>
+              <input type="text" id="question" class="user-content" placeholder="请输入密码提示问题" autocomplete="off">
+            </div>
+            <!--  密码提示问题答案 -->
+            <div class="user-item">
+              <label for="answer" class="user-label">
+                <i class="fa fa-key"></i>
+              </label>
+              <input type="text" id="answer" class="user-content" placeholder="请输入密码提示问题答案" autocomplete="off">
+            </div>
+            <!-- 注册按钮 -->
+            <a class="btn btn-submit" id="submit">立即注册</a>
+            <!-- 已有账号去登录 -->
+            <div class="link-item">
+              <a href="./user-login.html" class="link">已有账号，去登录>></a>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+    <!-- ejs模板语法 -->
+    <div class=footer> <div class=w> <div class=links> <a href=https://www.taobao.com class=link>淘宝</a> | <a href=http://www.163.com/ class=link>网易</a> | <a href=https://www.baidu.com class=link>百度</a> | <a href=https://www.zhihu.com/ class=link>知乎</a> </div> <p class=copyright>Copyright © 2018 YipMall All rights reserved</p> </div> </div> <script src=https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js></script> 
+<script type="text/javascript" src="/Users/sanjiyip/GitHub/Demos/Yip-Mall/dist/js/base.bundle-3fc3e809aecdb0a0b55b.js?3fc3e809aecdb0a0b55b"></script><script type="text/javascript" src="/Users/sanjiyip/GitHub/Demos/Yip-Mall/dist/js/user-register.bundle-3fc3e809aecdb0a0b55b.js?3fc3e809aecdb0a0b55b"></script></body>
+
+</html>

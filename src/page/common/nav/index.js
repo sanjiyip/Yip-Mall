@@ -2,7 +2,7 @@
  * @Author: yip 
  * @Date: 2018-02-07 16:11:35 
  * @Last Modified by: yip
- * @Last Modified time: 2018-02-08 11:47:13
+ * @Last Modified time: 2018-02-10 18:16:30
  */
 import './index.scss';
 import _mm from 'util/_mm.js';
@@ -23,7 +23,7 @@ const nav = {
     });
     // 注册点击事件——跳到注册页面
     $('.js-register').click(() => {
-      window.location.href = './register.html';
+      window.location.href = './user-register.html';
     });
     // 退出点击事件——调用_user.logout登出
     $('.js-logout').click(() => {

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <!-- ejs模板语法 -->
+  <%= require('html-loader!./layout/head-common.html')%>
+    <title>
+      <%= htmlWebpackPlugin.options.title %> - YipMall </title>
+</head>
+
+<body>
+  <%= require('html-loader!./layout/nav-simple.html')%>
+    <!-- 登录主体内容 -->
+    <div class="page-wrap">
+      <div class="w">
+        <div class="user-con">
+          <div class="user-title">用户登录</div>
+          <!-- 盒子 -->
+          <div class="user-box">
+            <!-- 错误信息提示 -->
+            <div class="error-item">
+              <i class="fa fa-minus-circle error-icon"></i>
+              <p class="error-msg">Error</p>
+            </div>
+            <!-- 用户名 -->
+            <div class="user-item">
+              <label for="user-name" class="user-label">
+                <i class="fa fa-user"></i>
+              </label>
+              <input type="text" id="user-name" class="user-content" placeholder="请输入用户名" autocomplete="off">
+            </div>
+            <!-- 用户密码 -->
+            <div class="user-item">
+              <label for="password" class="user-label">
+                <i class="fa fa-lock"></i>
+              </label>
+              <input type="password" id="password" class="user-content" placeholder="请输入用户密码" autocomplete="off">
+            </div>
+            <!-- 登录按钮 -->
+            <a class="btn btn-submit" id="submit" target="_blank">登录</a>
+            <!-- 忘记密码 免费注册 -->
+            <div class="link-item">
+              <a href="./user-pass-reset.html" class="link">忘记密码</a>
+              <a href="./user-register.html" class="link">免费注册</a>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+    <!-- ejs模板语法 -->
+    <%= require('html-loader!./layout/footer.html')%>
+</body>
+
+</html>

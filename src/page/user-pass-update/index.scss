@@ -1,0 +1,26 @@
+/*
+ * @Author: yip 
+ * @Date: 2018-02-22 20:34:00 
+ * @Last Modified by: yip
+ * @Last Modified time: 2018-02-22 20:39:40
+ */
+.form-line {
+  margin-top: 10px;
+  height: 30px;
+  line-height: 30px;
+  font-size: 14px;
+  &:last-of-type {
+    margin-bottom: 10px;
+  }
+  .label {
+    display: inline;
+    width: 60px;
+    text-align: center;
+  }
+  .input {
+    height: 25px;
+    line-height: 25px;
+    font-size: 14px;
+    outline: none;
+  }
+}

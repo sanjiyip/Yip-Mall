@@ -2,7 +2,7 @@
  * @Author: yip 
  * @Date: 2018-02-09 12:02:53 
  * @Last Modified by: yip
- * @Last Modified time: 2018-02-09 14:14:18
+ * @Last Modified time: 2018-02-22 20:50:52
  */
 import './index.scss';
 import _mm from 'util/_mm.js';
@@ -14,7 +14,11 @@ const navSide = {
     navList: [
       { name: 'user-center', desc: '用户中心', href: './user-center.html' },
       { name: 'order-list', desc: '我的订单', href: './order-list.html' },
-      { name: 'pass-update', desc: ' 修改密码', href: './pass-update.html' },
+      {
+        name: 'user-pass-update',
+        desc: ' 修改密码',
+        href: './user-pass-update.html'
+      },
       { name: 'about', desc: '关于YipMall', href: './about.html' }
     ]
   },

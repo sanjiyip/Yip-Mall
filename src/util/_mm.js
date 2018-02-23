@@ -2,7 +2,7 @@
  * @Author: yip 
  * @Date: 2018-02-01 21:27:04 
  * @Last Modified by: yip
- * @Last Modified time: 2018-02-07 17:14:57
+ * @Last Modified time: 2018-02-10 09:29:43
  */
 const hogan = require('hogan.js');
 
@@ -84,7 +84,7 @@ const _mm = {
   },
   //  统一登录处理
   doLogin() {
-    window.location.href = `./index.html?redirect=${encodeURIComponent(
+    window.location.href = `./user-login.html?redirect=${encodeURIComponent(
       window.location.href
     )}`;
   },

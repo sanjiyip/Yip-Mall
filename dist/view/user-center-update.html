@@ -2,23 +2,45 @@
 <html lang="en">
 
 <head>
-
   <!-- ejs模板语法 -->
   <meta charset=UTF-8> <meta http-equiv=X-UA-Compatible content="ie=edge"> <meta name=keywords content="Yip, 电商"> <meta name=description content=" YipMall电商平台开发"> <link href=https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css rel=stylesheet> 
     <title>
-      首页 - YipMall</title>
-<link href="/Users/sanjiyip/GitHub/Demos/Yip-Mall/dist/css/common.bundle-3fc3e809aecdb0a0b55b.css?3fc3e809aecdb0a0b55b" rel="stylesheet"><link href="/Users/sanjiyip/GitHub/Demos/Yip-Mall/dist/css/index.bundle-3fc3e809aecdb0a0b55b.css?3fc3e809aecdb0a0b55b" rel="stylesheet"></head>
+      修改用户信息 - YipMall</title>
+<link href="/Users/sanjiyip/GitHub/Demos/Yip-Mall/dist/css/common.bundle-3fc3e809aecdb0a0b55b.css?3fc3e809aecdb0a0b55b" rel="stylesheet"><link href="/Users/sanjiyip/GitHub/Demos/Yip-Mall/dist/css/user-center-update.bundle-3fc3e809aecdb0a0b55b.css?3fc3e809aecdb0a0b55b" rel="stylesheet"></head>
 
 <body>
   <div class=nav> <div class=w> <div class=user-info> <span class="user not-login"> <span class="link js-login">登录</span> <span class="link js-register">注册</span> </span> <span class="user login"> <span class=link-text> 欢迎， <span class=username></span> </span> <span class="link js-logout">退出</span> </span> </div> <ul class=nav-list> <li class=nav-item> <a class=link href=./cart.html> <i class="fa fa-shopping-cart"></i> 购物车( <span class=cart-count>0</span>) </a> </li> <li class=nav-item> <a class=link href=./order-list.html>我的订单</a> </li> <li class=nav-item> <a class=link href=./user-center.html>我的MMall</a> </li> <li class=nav-item> <a class=link href=./about.html>关于MMall</a> </li> </ul> </div> </div> 
     <div class=header> <div class=w> <a class="logo link-text" href=./index.html>YipMall</a> <div class=search-con> <input type=text class=search-input id=search-input placeholder=请输入商品名称 /> <button class="btn search-btn" id=search-btn>搜索</button> </div> </div> </div> 
       <!-- 首页主体内容 -->
+      <div class="crumb">
+        <div class="w">
+          <div class="crumb-con">
+            <a href="./index.html" class="link">YipMall</a>
+            <span>></span>
+            <a class="link-text">
+              修改用户信息
+            </a>
+          </div>
+        </div>
+      </div>
       <div class="page-wrap w">
+        <!-- 左侧导航栏 -->
         <ul class=nav-side> </ul> 
-          <div class="content with-nav">test</div>
+          <!-- 右侧内容区 -->
+          <div class="content with-nav">
+            <!-- 个人中心面板 -->
+            <div class="panel">
+              <div class="panel-con">
+                <div class="panel-title">修改个人信息</div>
+                <div class="panel-body">
+                  <div class="loading"></div>
+                </div>
+              </div>
+            </div>
+          </div>
       </div>
       <!-- ejs模板语法 -->
       <div class=footer> <div class=w> <div class=links> <a href=https://www.taobao.com class=link>淘宝</a> | <a href=http://www.163.com/ class=link>网易</a> | <a href=https://www.baidu.com class=link>百度</a> | <a href=https://www.zhihu.com/ class=link>知乎</a> </div> <p class=copyright>Copyright © 2018 YipMall All rights reserved</p> </div> </div> <script src=https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js></script> 
-<script type="text/javascript" src="/Users/sanjiyip/GitHub/Demos/Yip-Mall/dist/js/base.bundle-3fc3e809aecdb0a0b55b.js?3fc3e809aecdb0a0b55b"></script><script type="text/javascript" src="/Users/sanjiyip/GitHub/Demos/Yip-Mall/dist/js/index.bundle-3fc3e809aecdb0a0b55b.js?3fc3e809aecdb0a0b55b"></script></body>
+<script type="text/javascript" src="/Users/sanjiyip/GitHub/Demos/Yip-Mall/dist/js/base.bundle-3fc3e809aecdb0a0b55b.js?3fc3e809aecdb0a0b55b"></script><script type="text/javascript" src="/Users/sanjiyip/GitHub/Demos/Yip-Mall/dist/js/user-center-update.bundle-3fc3e809aecdb0a0b55b.js?3fc3e809aecdb0a0b55b"></script></body>
 
 </html>

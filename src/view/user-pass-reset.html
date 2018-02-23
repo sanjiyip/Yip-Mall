@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <!-- ejs模板语法 -->
+  <%= require('html-loader!./layout/head-common.html')%>
+    <title>
+      <%= htmlWebpackPlugin.options.title %> - YipMall </title>
+</head>
+
+<body>
+  <%= require('html-loader!./layout/nav-simple.html')%>
+    <!-- 登录主体内容 -->
+    <div class="page-wrap">
+      <div class="w">
+        <div class="user-con">
+          <div class="user-title">找回密码</div>
+          <!-- 盒子 -->
+          <div class="user-box">
+            <!-- 错误信息提示 -->
+            <div class="error-item">
+              <i class="fa fa-minus-circle error-icon"></i>
+              <p class="error-msg">Error</p>
+            </div>
+            <!-- 输入用户名 -->
+            <div class="step-con step-username">
+              <p class="user-item-text">请输入用户名：</p>
+              <div class="user-item">
+                <label for="user-name" class="user-label">
+                  <i class="fa fa-user"></i>
+                </label>
+                <input type="text" id="user-name" class="user-content" placeholder="请输入用户名" autocomplete="off">
+              </div>
+              <a class="btn btn-submit" id="submit-username" target="_blank">下一步</a>
+              <div class="link-item">
+                <a href="./user-login.html" class="link">返回登录>></a>
+              </div>
+            </div>
+
+            <!--  提示问题答案 -->
+            <div class="step-con step-question">
+              <p class="user-item-text">密码提示问题答案是：
+                <span class="question"></span>
+              </p>
+              <div class="user-item">
+                <label for="password" class="user-label">
+                  <i class="fa fa-key"></i>
+                </label>
+                <input id="answer" class="user-content" placeholder="请输入提示问题答案" autocomplete="off">
+              </div>
+              <a class="btn btn-submit" id="submit-question" target="_blank">下一步</a>
+              <div class="link-item">
+                <a href="./user-login.html" class="link">返回登录>></a>
+              </div>
+            </div>
+
+            <!-- 重设密码 -->
+            <div class="step-con step-password">
+              <p class="user-item-text">请输入新密码：</p>
+              <div class="user-item">
+                <label for="password" class="user-label">
+                  <i class="fa fa-lock"></i>
+                </label>
+                <input type="password" id="password" class="user-content" placeholder="请输入新密码" autocomplete="off">
+              </div>
+              <a class="btn btn-submit" id="submit-password" target="_blank">下一步</a>
+              <div class="link-item">
+                <a href="./user-login.html" class="link">返回登录>></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- ejs模板语法 -->
+    <%= require('html-loader!./layout/footer.html')%>
+</body>
+
+</html>

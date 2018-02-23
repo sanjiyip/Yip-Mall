@@ -1,0 +1,80 @@
+/*
+ * @Author: yip 
+ * @Date: 2018-02-10 14:46:45 
+ * @Last Modified by: yip
+ * @Last Modified time: 2018-02-10 14:48:55
+ */
+.page-wrap {
+  padding: 40px 0;
+  background: #e72955;
+  .user-con {
+    position: relative;
+    width: 400px;
+    margin: 0 auto;
+    background: #fff;
+    .user-title {
+      text-align: center;
+      padding: 10px 0;
+      border-bottom: 1px solid #ddd;
+      font-size: 18px;
+      font-weight: bold;
+      color: #666;
+    }
+    .user-box {
+      padding: 20px; // 错误提示
+      .error-item {
+        position: relative;
+        background: #fde9e9;
+        padding: 4px 0 4px 40px;
+        border: 1px solid red;
+        color: red;
+        margin-bottom: 10px; // 有 js 来控制显示和隐藏
+        display: none;
+        .error-icon {
+          position: absolute;
+          left: 14px;
+          top: 50%;
+          margin-top: -7px;
+          font-size: 14px;
+        }
+      } // 用户表单栏
+      .user-item {
+        position: relative;
+        margin-bottom: 20px;
+        .user-label {
+          position: absolute;
+          left: 1px;
+          top: 1px;
+          bottom: 1px;
+          width: 40px;
+          line-height: 36px;
+          background: #f3f3f3;
+          color: #d3d3d3;
+          font-size: 18px;
+          text-align: center;
+          border-right: 1px solid #bdbdbd;
+        }
+        .user-content {
+          padding: 10px 0 10px 50px;
+          outline: none;
+          width: 308px;
+          border: 1px solid #bdbdbd;
+        }
+      } // 登录按钮
+      .btn-submit {
+        width: 100%;
+        padding: 2px 0;
+        font-size: 18px;
+        text-align: center;
+      } // 注册登录链接
+      .link-item {
+        text-align: right;
+        margin-top: 10px;
+        .link {
+          margin-left: 10px;
+          color: #999;
+        }
+      }
+    }
+  }
+}
