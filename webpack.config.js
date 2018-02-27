@@ -2,7 +2,7 @@
  * @Author: yip 
  * @Date: 2018-02-10 14:50:26 
  * @Last Modified by: yip
- * @Last Modified time: 2018-02-22 20:37:01
+ * @Last Modified time: 2018-02-27 09:53:48
  */
 const path = require('path');
 const webpack = require('webpack');
@@ -30,6 +30,8 @@ const config = {
   entry: {
     common: [path.join(__dirname, './src/page/common/index.js')],
     index: [path.join(__dirname, './src/page/index/index.js')],
+    list: [path.join(__dirname, './src/page/list/index.js')],
+    detail: [path.join(__dirname, './src/page/detail/index.js')],
     'user-login': [path.join(__dirname, './src/page/user-login/index.js')],
     'user-register': [
       path.join(__dirname, './src/page/user-register/index.js')
@@ -100,7 +102,6 @@ const config = {
           {
             loader: 'url-loader',
             options: {
-              limit: 8192,
               name: '/resource/[name].[ext]'
             }
           }
@@ -116,6 +117,8 @@ const config = {
   plugins: [
     // HTML 模板页面模板(多页面就需要多个 HTML 模板)
     new HtmlWebpackPlugin(getHTMLConfig('index', '首页')),
+    new HtmlWebpackPlugin(getHTMLConfig('list', '商品列表页')),
+    new HtmlWebpackPlugin(getHTMLConfig('detail', '商品详情页')),
     new HtmlWebpackPlugin(getHTMLConfig('user-login', '登录页')),
     new HtmlWebpackPlugin(getHTMLConfig('user-register', '注册页')),
     new HtmlWebpackPlugin(getHTMLConfig('user-pass-reset', '找回密码')),

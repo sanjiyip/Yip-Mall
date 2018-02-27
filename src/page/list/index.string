@@ -1,0 +1,23 @@
+{{#list}}
+<li class="p-item">
+  <!-- 商品图片内容 -->
+  <div class="p-img-con">
+    <a href="./detail.html?productId={{id}}" target = "_blank" class="link">
+      <img class="p-img" src="{{imageHost}}{{mainImage}}" alt="{{name}}">
+    </a>
+  </div> 
+  <!-- 价格内容 -->
+  <div class="p-price-con">
+    <span class="p-price">￥{{price}}</span>
+  </div>
+  <!-- 产品名内容 -->
+  <div class="p-name-con">
+    <a href="./detail.html?productId={{id}}" target = "_blank" class="p-name">{{name}}</a>
+  </div>
+</li>
+{{/list}}
+<!-- 没有找到列表时，提示错误信息 -->
+{{^list}}
+  <p class="err-tip">真的很抱歉，没找到对应的商品</p>
+{{/list}}
+

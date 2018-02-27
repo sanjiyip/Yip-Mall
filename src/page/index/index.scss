@@ -1,1 +1,147 @@
+/*
+ * @Author: yip 
+ * @Date: 2018-02-23 11:38:53 
+ * @Last Modified by: yip
+ * @Last Modified time: 2018-02-23 16:34:48
+ */
 
+/* 左侧关键词部分 */
+
+.keywords-wrap {
+  float: left;
+  padding: 10px 0;
+  width: 240px;
+  height: 350px;
+  margin-right: 10px;
+  background: #666;
+  color: #fff;
+  .keywords-item {
+    padding-left: 12px;
+    height: 35px;
+    line-height: 35px;
+    font-size: 14px;
+    &:hover {
+      background: #999;
+    }
+    .link {
+      margin-right: 6px;
+      color: #fff;
+      &:hover {
+        color: #c60023;
+      }
+    }
+  }
+}
+
+/* banner部分 */
+
+.banner-con {
+  float: left;
+  width: 830px;
+  height: 370px;
+  background: #eee;
+  .loading {
+    margin-top: 150px;
+  }
+  // 轮播图样式
+  .banner-img {
+    width: 100%;
+    height: 370px;
+  }
+  .banner-arrow {
+    position: absolute;
+    top: 160px;
+    width: 30px;
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+    font-size: 30px;
+    color: #fff;
+    background: rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    &.pre {
+      left: 0;
+    }
+    &.next {
+      right: 0;
+    }
+    &:hover {
+      background: rgba(0, 0, 0, 0.5);
+    }
+  }
+}
+
+/* floor部分 */
+
+.floor-wrap {
+  // 楼层标题
+  .floor-title {
+    height: 50px;
+    line-height: 50px;
+    color: #d58717;
+    font-weight: normal;
+    font-size: 20px;
+    border-bottom: 1px solid #d58717;
+  }
+  // 不同楼层的颜色
+  &:nth-child(2) {
+    .floor-title {
+      color: #3c838c;
+      border-bottom: 1px solid #3c838c;
+    }
+  }
+  &:nth-child(3) {
+    .floor-title {
+      color: #a93931;
+      border-bottom: 1px solid #a93931;
+    }
+  }
+  &:nth-child(4) {
+    .floor-title {
+      color: #488bad;
+      border-bottom: 1px solid #488bad;
+    }
+  }
+  &:nth-child(5) {
+    .floor-title {
+      color: #642663;
+      border-bottom: 1px solid #642663;
+    }
+  }
+
+  // 楼层商品列表
+  .floor-list {
+    margin-right: -20px;
+    overflow: hidden;
+    // 楼层商品单项
+    .floor-item {
+      position: relative;
+      width: 200px;
+      height: 220px;
+      margin: 15px 20px 15px 0;
+      cursor: pointer;
+      background: #fff;
+      float: left;
+      &:hover {
+        box-shadow: 1px 1px 7px #ddd;
+      }
+      // 单项商品名称
+      .floor-text {
+        position: absolute;
+        top: 12px;
+        left: 20px;
+        font-size: 16px;
+        color: #555;
+      }
+      // 单项商品图片
+      .floor-img {
+        position: absolute;
+        right: 15px;
+        bottom: 10px;
+        width: 80%;
+        height: 75%;
+        border: none;
+      }
+    }
+  }
+}
