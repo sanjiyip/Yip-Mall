@@ -2,7 +2,7 @@
  * @Author: yip 
  * @Date: 2018-02-01 21:27:04 
  * @Last Modified by: yip
- * @Last Modified time: 2018-02-10 09:29:43
+ * @Last Modified time: 2018-02-28 10:26:05
  */
 const hogan = require('hogan.js');
 
@@ -14,6 +14,7 @@ const config = {
 const _mm = {
   // ajax 请求
   request(param) {
+    const _this = this;
     $.ajax({
       type: param.method || 'get',
       url: param.url || '',
@@ -26,7 +27,7 @@ const _mm = {
             param.success(res.data, res.msg);
           // 没有登录状态，需要强制登录
         } else if (res.status === 10) {
-          this.doLogin.bind(_mm);
+          _this.doLogin();
           // 请求成功，但数据内容有错
         } else if (res.status === 1) {
           typeof param.error === 'function' && param.error(res.msg);

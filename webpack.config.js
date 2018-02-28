@@ -2,7 +2,7 @@
  * @Author: yip 
  * @Date: 2018-02-10 14:50:26 
  * @Last Modified by: yip
- * @Last Modified time: 2018-02-27 09:53:48
+ * @Last Modified time: 2018-02-27 16:23:25
  */
 const path = require('path');
 const webpack = require('webpack');
@@ -32,6 +32,7 @@ const config = {
     index: [path.join(__dirname, './src/page/index/index.js')],
     list: [path.join(__dirname, './src/page/list/index.js')],
     detail: [path.join(__dirname, './src/page/detail/index.js')],
+    cart: [path.join(__dirname, './src/page/cart/index.js')],
     'user-login': [path.join(__dirname, './src/page/user-login/index.js')],
     'user-register': [
       path.join(__dirname, './src/page/user-register/index.js')
@@ -119,6 +120,7 @@ const config = {
     new HtmlWebpackPlugin(getHTMLConfig('index', '首页')),
     new HtmlWebpackPlugin(getHTMLConfig('list', '商品列表页')),
     new HtmlWebpackPlugin(getHTMLConfig('detail', '商品详情页')),
+    new HtmlWebpackPlugin(getHTMLConfig('cart', '购物车页')),
     new HtmlWebpackPlugin(getHTMLConfig('user-login', '登录页')),
     new HtmlWebpackPlugin(getHTMLConfig('user-register', '注册页')),
     new HtmlWebpackPlugin(getHTMLConfig('user-pass-reset', '找回密码')),
