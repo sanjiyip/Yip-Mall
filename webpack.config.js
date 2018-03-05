@@ -2,7 +2,7 @@
  * @Author: yip 
  * @Date: 2018-02-10 14:50:26 
  * @Last Modified by: yip
- * @Last Modified time: 2018-02-27 16:23:25
+ * @Last Modified time: 2018-03-05 14:21:19
  */
 const path = require('path');
 const webpack = require('webpack');
@@ -33,6 +33,11 @@ const config = {
     list: [path.join(__dirname, './src/page/list/index.js')],
     detail: [path.join(__dirname, './src/page/detail/index.js')],
     cart: [path.join(__dirname, './src/page/cart/index.js')],
+    'order-confirm': [
+      path.join(__dirname, './src/page/order-confirm/index.js')
+    ],
+    'order-list': [path.join(__dirname, './src/page/order-list/index.js')],
+    'order-detail': [path.join(__dirname, './src/page/order-detail/index.js')],
     'user-login': [path.join(__dirname, './src/page/user-login/index.js')],
     'user-register': [
       path.join(__dirname, './src/page/user-register/index.js')
@@ -118,16 +123,19 @@ const config = {
   plugins: [
     // HTML 模板页面模板(多页面就需要多个 HTML 模板)
     new HtmlWebpackPlugin(getHTMLConfig('index', '首页')),
-    new HtmlWebpackPlugin(getHTMLConfig('list', '商品列表页')),
-    new HtmlWebpackPlugin(getHTMLConfig('detail', '商品详情页')),
-    new HtmlWebpackPlugin(getHTMLConfig('cart', '购物车页')),
-    new HtmlWebpackPlugin(getHTMLConfig('user-login', '登录页')),
-    new HtmlWebpackPlugin(getHTMLConfig('user-register', '注册页')),
+    new HtmlWebpackPlugin(getHTMLConfig('list', '商品列表')),
+    new HtmlWebpackPlugin(getHTMLConfig('detail', '商品详情')),
+    new HtmlWebpackPlugin(getHTMLConfig('cart', '购物车')),
+    new HtmlWebpackPlugin(getHTMLConfig('order-confirm', '订单确认')),
+    new HtmlWebpackPlugin(getHTMLConfig('order-list', '订单列表')),
+    new HtmlWebpackPlugin(getHTMLConfig('order-detail', ' 订单详情')),
+    new HtmlWebpackPlugin(getHTMLConfig('user-login', '登录')),
+    new HtmlWebpackPlugin(getHTMLConfig('user-register', '注册')),
     new HtmlWebpackPlugin(getHTMLConfig('user-pass-reset', '找回密码')),
     new HtmlWebpackPlugin(getHTMLConfig('user-center', '用户中心')),
     new HtmlWebpackPlugin(getHTMLConfig('user-center-update', '修改用户信息')),
     new HtmlWebpackPlugin(getHTMLConfig('user-pass-update', '修改密码')),
-    new HtmlWebpackPlugin(getHTMLConfig('result', '操作结果页')),
+    new HtmlWebpackPlugin(getHTMLConfig('result', '操作结果')),
 
     // 提取公共模块的插件 —— 会将重复使用的代码提取出来
     new webpack.optimize.CommonsChunkPlugin({

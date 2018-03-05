@@ -2,7 +2,7 @@
  * @Author: yip 
  * @Date: 2018-02-27 16:18:57 
  * @Last Modified by: yip
- * @Last Modified time: 2018-02-28 15:47:58
+ * @Last Modified time: 2018-02-28 16:39:43
  */
 /*
  * @Author: yip 
@@ -143,7 +143,7 @@ const page = {
     // 提交确认订单
     $(document).on('click', '.btn-submit', function() {
       if (_this.data.cartInfo && _this.data.cartInfo.cartTotalPrice > 0) {
-        window.location.href = './confirm.html';
+        window.location.href = './order-confirm.html';
       } else {
         _mm.errorTips('请选择商品后再提交');
       }

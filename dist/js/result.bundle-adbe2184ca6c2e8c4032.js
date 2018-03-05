@@ -1,0 +1,1 @@
+webpackJsonp([13],{10:function(t,n,u){"use strict";u(11)},11:function(t,n){},85:function(t,n,u){t.exports=u(86)},86:function(t,n,u){"use strict";var e=u(0),c=function(t){return t&&t.__esModule?t:{default:t}}(e);u(10),u(87),$(function(){var t=c.default.getURLParam("type")||"default";$("."+t+"-success").show()})},87:function(t,n){}},[85]);

@@ -1,0 +1,191 @@
+/*
+ * @Author: yip 
+ * @Date: 2018-02-28 16:36:08 
+ * @Last Modified by: yip
+ * @Last Modified time: 2018-03-01 13:26:11
+ */
+// 地址
+.address-con {
+  .address-item,
+  .address-add {
+    padding: 5px 8px;
+    margin: 20px 20px 0 0;
+    width: 200px;
+    float: left;
+    border: 3px dashed #ccc;
+    cursor: pointer;
+    &:hover {
+      background: #fafafa;
+      .address-opera {
+        visibility: visible;
+      }
+    }
+    &.active {
+      border: 3px dashed #c60023;
+    }
+    .address-title {
+      color: #666;
+      height: 20px;
+      line-height: 20px;
+      overflow: hidden;
+      border-bottom: 1px solid #ddd;
+    }
+    .address-detail {
+      margin-top: 5px;
+      height: 40px;
+      line-height: 20px;
+      overflow: hidden;
+      color: #666;
+    }
+    .address-opera {
+      float: right;
+      visibility: hidden;
+      .link {
+        margin-right: 5px;
+      }
+    }
+    .address-new {
+      text-align: center;
+      padding: 8px;
+      color: #ccc;
+      .fa {
+        line-height: 50px;
+        font-size: 50px;
+      }
+      .text {
+        font-size: 12px;
+      }
+    }
+  }
+}
+// 商品清单
+.product-con {
+  .product-table {
+    width: 100%;
+    margin: 10px 0;
+    border-collapse: collapse;
+    th,
+    td {
+      border-bottom: 1px dotted #ddd;
+    }
+    .cell-img {
+      width: 10%;
+      text-align: center;
+      padding: 10px;
+      .p-img {
+        width: 80px;
+        height: 80px;
+        border: 1px solid #ddd;
+      }
+    }
+    .cell-info {
+      width: 30%;
+      text-align: center;
+    }
+
+    .cell-price {
+      width: 20%;
+      text-align: center;
+    }
+
+    .cell-count {
+      width: 20%;
+      text-align: center;
+    }
+
+    .cell-total {
+      width: 20%;
+      text-align: center;
+    }
+  }
+  .submit-con {
+    background: #eee;
+    text-align: right;
+    .submit-total {
+      margin-right: 20px;
+      font-size: 18px;
+      color: #c60023;
+      font-weight: bold;
+      vertical-align: middle;
+    }
+    .order-submit {
+      height: 50px;
+      line-height: 50px;
+      width: 100px;
+      text-align: center;
+    }
+  }
+}
+
+// modal
+
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: #eee;
+  background: rgba(0, 0, 0, 0.4);
+  z-index: 1000;
+  // 不能左右滚动
+  overflow-x: hidden;
+  overflow-y: auto;
+  .modal-container {
+    width: 700px;
+    margin: 50px auto;
+    background: #fff;
+    border-radius: 2px;
+    .modal-header {
+      position: relative;
+      padding: 15px;
+      border-bottom: 1px solid #ccc;
+      .modal-title {
+        font-size: 14px;
+      }
+      .close {
+        position: absolute;
+        padding: 10px;
+        top: 10px;
+        right: 10px;
+        cursor: pointer;
+      }
+    }
+    .modal-body {
+      .form {
+        padding: 15px;
+        .form-line {
+          margin: 5px 0;
+          overflow: hidden;
+          .label {
+            float: left;
+            display: block;
+            width: 80px;
+            text-align: right;
+            height: 30px;
+            line-height: 30px;
+            margin-right: 10px;
+            cursor: pointer;
+            .require {
+              color: #c60023;
+            }
+          }
+          .formItem {
+            padding: 0 5px;
+            height: 30px;
+            line-height: 30px;
+            outline: none;
+            margin-right: 10px;
+          }
+          .btn {
+            margin-left: 90px;
+            height: 30px;
+            line-height: 30px;
+            font-size: 13px;
+          }
+        }
+      }
+    }
+  }
+}
+// 表单
