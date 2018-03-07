@@ -2,7 +2,7 @@
  * @Author: yip 
  * @Date: 2018-02-28 16:36:02 
  * @Last Modified by: yip
- * @Last Modified time: 2018-03-05 16:23:56
+ * @Last Modified time: 2018-03-05 18:42:43
  */
 import './index.scss';
 import 'page/common/header/index.js';
@@ -45,7 +45,7 @@ const page = {
             shippingId: shippingId
           },
           res => {
-            window.location.href = './payment.html?orderNo=' + res.orderNo;
+            window.location.href = './payment.html?orderNumber=' + res.orderNo;
           },
           errMsg => {
             _mm.errorTips(errMsg);

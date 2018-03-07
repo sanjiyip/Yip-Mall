@@ -2,7 +2,7 @@
  * @Author: yip 
  * @Date: 2018-02-06 16:18:32 
  * @Last Modified by: yip
- * @Last Modified time: 2018-02-27 20:28:10
+ * @Last Modified time: 2018-03-05 18:13:11
  */
 //  css-rest
 /* css reset */
@@ -122,4 +122,15 @@ input[type="checkbox"] {
   border-radius: 5px;
   background: url(../../image/icon/loading.gif) no-repeat;
   opacity: 0.6;
+}
+// 错误提示
+
+.err-tip {
+  line-height: 60px;
+  height: 60px;
+  color: #f60;
+  font-size: 16px;
+  font-weight: bold;
+  text-align: center;
+  background: #eee;
 }

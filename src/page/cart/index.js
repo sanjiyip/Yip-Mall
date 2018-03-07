@@ -2,14 +2,9 @@
  * @Author: yip 
  * @Date: 2018-02-27 16:18:57 
  * @Last Modified by: yip
- * @Last Modified time: 2018-02-28 16:39:43
+ * @Last Modified time: 2018-03-05 17:31:06
  */
-/*
- * @Author: yip 
- * @Date: 2018-02-27 09:55:41 
- * @Last Modified by: yip
- * @Last Modified time: 2018-02-27 15:22:59
- */
+
 import './index.scss';
 import 'page/common/header/index.js';
 import nav from 'page/common/nav/index.js';

@@ -2,7 +2,7 @@
  * @Author: yip 
  * @Date: 2018-02-10 14:50:26 
  * @Last Modified by: yip
- * @Last Modified time: 2018-03-05 14:21:19
+ * @Last Modified time: 2018-03-06 12:15:32
  */
 const path = require('path');
 const webpack = require('webpack');
@@ -19,6 +19,7 @@ let getHTMLConfig = (name, title) => {
     template: path.join(__dirname, `./src/view/${name}.html`), //定义插件读取的模板文件是根目录下的[name].html
     filename: `view/${name}.html`, //定义通过模板文件新生成的页面名称
     title: title,
+    favicon: './favicon.ico', // favicon图标
     inject: true,
     hash: true,
     chunks: ['common', name] // chunks 成员必须是 entry 中的属性名
@@ -33,6 +34,8 @@ const config = {
     list: [path.join(__dirname, './src/page/list/index.js')],
     detail: [path.join(__dirname, './src/page/detail/index.js')],
     cart: [path.join(__dirname, './src/page/cart/index.js')],
+    payment: [path.join(__dirname, './src/page/payment/index.js')],
+    about: [path.join(__dirname, './src/page/about/index.js')],
     'order-confirm': [
       path.join(__dirname, './src/page/order-confirm/index.js')
     ],
@@ -55,9 +58,9 @@ const config = {
     result: [path.join(__dirname, './src/page/result/index.js')]
   },
   output: {
-    path: path.join(__dirname, './dist'),
-    // publicPath: path.join(__dirname, './dist'), //生产环境用
-    publicPath: '/dist/', //开发环境用
+    path: path.join(__dirname, '/dist/'),
+    publicPath:
+      WEBPACK_ENV !== 'dev' ? '//s.happymmall.com/mmall-fe/dist/' : '/dist/', //线上环境使用（www.sanjiyip.com）
     filename: 'js/[name].bundle-[hash].js' // 在文件名前加上路径，就可以生成文件夹
   },
   // webpack-dev-server
@@ -116,7 +119,17 @@ const config = {
       // html-loader
       {
         test: /\.string$/,
-        use: ['html-loader']
+        use: [
+          {
+            loader: 'html-loader',
+            options: {
+              minimize: true,
+              removeComments: false,
+              collapseWhitespace: false,
+              removeAttributeQuotes: false
+            }
+          }
+        ]
       }
     ]
   },
@@ -126,9 +139,11 @@ const config = {
     new HtmlWebpackPlugin(getHTMLConfig('list', '商品列表')),
     new HtmlWebpackPlugin(getHTMLConfig('detail', '商品详情')),
     new HtmlWebpackPlugin(getHTMLConfig('cart', '购物车')),
+    new HtmlWebpackPlugin(getHTMLConfig('about', '关于YipMall')),
     new HtmlWebpackPlugin(getHTMLConfig('order-confirm', '订单确认')),
     new HtmlWebpackPlugin(getHTMLConfig('order-list', '订单列表')),
     new HtmlWebpackPlugin(getHTMLConfig('order-detail', ' 订单详情')),
+    new HtmlWebpackPlugin(getHTMLConfig('payment', '订单支付')),
     new HtmlWebpackPlugin(getHTMLConfig('user-login', '登录')),
     new HtmlWebpackPlugin(getHTMLConfig('user-register', '注册')),
     new HtmlWebpackPlugin(getHTMLConfig('user-pass-reset', '找回密码')),
@@ -160,7 +175,6 @@ if (WEBPACK_ENV === 'dev') {
 if (WEBPACK_ENV !== 'dev') {
   // 清除旧的 dist 文件夹插件 （生产环境使用CleanWebpackPlugin）
   config.plugins.push(new CleanWebpackPlugin(['dist']));
-  config.output.publicPath = path.join(__dirname, './dist');
 }
 
 module.exports = config;

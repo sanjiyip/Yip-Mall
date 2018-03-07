@@ -2,7 +2,7 @@
  * @Author: yip 
  * @Date: 2018-03-01 14:55:27 
  * @Last Modified by: yip
- * @Last Modified time: 2018-03-05 16:27:06
+ * @Last Modified time: 2018-03-06 12:05:31
  */
 
 import _mm from 'util/_mm.js';
@@ -70,7 +70,7 @@ const addressModal = {
           }
         );
       } else {
-        _mm.errorTips(receiverInfo.errMsg) || _mm.errorTips('哪里不对了');
+        _mm.errorTips(receiverInfo.errMsg);
       }
     });
     // 阻止冒泡（使用事件代理时）
@@ -143,7 +143,7 @@ const addressModal = {
     receiverInfo.receiverAddress = $.trim(
       this.$modalWrap.find('#receiver-address').val()
     );
-    receiverInfo.receiverMobile = $.trim(
+    receiverInfo.receiverPhone = $.trim(
       this.$modalWrap.find('#receiver-phone').val()
     );
     receiverInfo.receiverZip = $.trim(
