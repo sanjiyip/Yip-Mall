@@ -2,7 +2,7 @@
  * @Author: yip 
  * @Date: 2018-02-10 14:50:26 
  * @Last Modified by: yip
- * @Last Modified time: 2018-03-06 12:15:32
+ * @Last Modified time: 2018-03-08 09:35:02
  */
 const path = require('path');
 const webpack = require('webpack');
@@ -171,10 +171,10 @@ if (WEBPACK_ENV === 'dev') {
   config.entry.common.push('webpack-dev-server/client?http://localhost:8080');
 }
 
-// 生产环境
-if (WEBPACK_ENV !== 'dev') {
-  // 清除旧的 dist 文件夹插件 （生产环境使用CleanWebpackPlugin）
-  config.plugins.push(new CleanWebpackPlugin(['dist']));
-}
+// // 生产环境
+// if (WEBPACK_ENV !== 'dev') {
+//   // 清除旧的 dist 文件夹插件 （生产环境使用CleanWebpackPlugin）
+//   config.plugins.push(new CleanWebpackPlugin(['dist']));
+// }
 
 module.exports = config;
