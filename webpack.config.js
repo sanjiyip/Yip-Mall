@@ -2,7 +2,7 @@
  * @Author: yip 
  * @Date: 2018-02-10 14:50:26 
  * @Last Modified by: yip
- * @Last Modified time: 2018-03-08 09:35:02
+ * @Last Modified time: 2018-03-08 10:23:59
  */
 const path = require('path');
 const webpack = require('webpack');
@@ -59,8 +59,7 @@ const config = {
   },
   output: {
     path: path.join(__dirname, '/dist/'),
-    publicPath:
-      WEBPACK_ENV !== 'dev' ? '//s.happymmall.com/mmall-fe/dist/' : '/dist/', //线上环境使用（www.sanjiyip.com）
+    publicPath: WEBPACK_ENV !== 'dev' ? '/dist/' : '/dist/', //线上环境使用（www.sanjiyip.com）
     filename: 'js/[name].bundle-[hash].js' // 在文件名前加上路径，就可以生成文件夹
   },
   // webpack-dev-server
